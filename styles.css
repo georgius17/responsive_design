@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
+
+body {
+    font-family: 'Cantarell', sans-serif;
+    margin:0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 10px 25px #eeeeee;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #aaa;
+    margin: 10px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+nav a:hover {
+    color: black;
+}
+
+nav img {
+    background-image: linear-gradient(to bottom right, #db1475, #ff4422);
+    box-sizing: border-box;
+    padding: 15px;
+    height: 100%;
+    width: 100px;
+    align-self: flex-start;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    align-self: flex-end;
+    height: 30px;
+    width: 55px;
+    cursor: pointer;
+}
+
+.hamburger > div {
+    margin: 1px;
+    height: 3px;
+    width: 50%;
+    background-color: orange;
+}
+
+.featuredGrid {
+    margin-top: 65px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(200px, 300px);
+    grid-auto-flow: row;
+    row-gap: 5px;
+    column-gap: 5px;
+    width: 100%;
+}
+
+#item1 {
+    grid-column: 1/span 2;
+    grid-row: 1/span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-image: url("imgs/i1.jpg");
+    background-size: cover;
+    color: white;
+    padding: 10px;
+}
+
+#item1 img {
+    width: 50%;
+    height: auto;
+    grid-row: 1/span 1;
+    grid-column: 1/ span 1;
+    margin: 10px;
+}
+
+#item1 strong {
+    color: white;
+    align-self: start;
+    justify-self: end;
+    margin: 10px;
+}
+
+#item1 h1 {
+    grid-row: 2/span 1;
+   color: white;
+   align-self: end;
+   font-size: 45px;
+}
+
+#item2 {
+    background-image: url("imgs/i2.jpg");
+    background-size: cover;
+    display: grid;
+    align-items: end;
+    align-content: end;  
+    color: white;
+    padding: 10px;
+}
+
+#item3 {
+    background-image: url("imgs/i3.jpg");
+    background-size: cover;
+    display: grid;
+    align-items: end;
+    align-content: end; 
+    color: white;
+    padding: 10px;
+}
+
+#item2 h2, #item2 h5, 
+#item3 h2, #item3 h5 {
+    margin:0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+#item4, #item5, #item7 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(200px, 300px);
+    margin: 10px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.news, .deals {
+    height: auto;
+}
+
+.news img {
+    width: 100%;
+    max-height: 45%;
+}
+
+.deals img {
+    width: 100%;
+}
+
+.deals h4 {
+    margin: 5px;
+}
+
+.rounds {
+    display: block;
+    border: 1px solid black;
+    background-image: linear-gradient( #ff4422, #ff4422 15%, #ffebe7 15%, #ffebe7 35%, #fffaf8 35%, #fffaf8 100%);
+}
+
+.rounds img {
+    float: left;
+    width: 60px;
+    margin: 10px;
+}
+
+.rounds p:last-child {
+    margin-top: 50px;
+    border-top: 1px solid orange;
+}
+
+.roundsPanel {
+    width: 100%;
+    height: 50px;
+
+}
+
+.roundsPanel h2 {
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2em;
+    color: red;
+    margin-left: 10px;
+}
+
+.roundsPanel a {
+    float: right;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 3em;
+    color: red;
+    text-decoration: none;
+}
+
+#item6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(350px, 600px);
+    margin: 10px;
+    column-gap: 10px;
+}
+
+.popular {
+    display: block;
+    
+}
+
+.popular h1 {
+    color: #f42;
+    font-size: 24px;
+}
+
+.popularImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url("imgs/2.jpg");
+    background-size: cover;
+    background-clip: border-box;
+    background-color: transparent;
+    height: 40%;
+    color: white;
+}
+
+.popularImg p {
+    color: hsla(0,0%,100%,.6);
+    background-image: linear-gradient(hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 1));
+    height: 20%;
+    margin: 0;
+    padding: 0 10px;
+    line-height: 3em;
+    font-size: 12px;
+}
+
+.popularImg h3 {
+    padding: 0 10px;
+}
+
+.popularImg strong {
+    padding: 0 10px;
+    font-weight: normal;
+}
+
+.popularLatest {
+    display: block;
+    background-color: #fff4f2;
+    height: 96px;
+    color: #f42;
+    margin: 1px auto;
+}
+
+.popularLatest h5 {
+    float: left;
+    max-width: 65%;
+    margin: 0 3px;
+}
+
+.popularLatest img {
+    max-width: 30%;
+    height: 96px;
+    float: right;
+    margin: 0 auto;
+}
+
+.popular ul {
+    display: block;
+    float: left;
+    margin: 0;
+    padding-left: 15px;
+}
+
+.popular li {
+    border-bottom: 1px solid #b5b5b5;
+}
+
+.popular a {
+    color: #4d4d4d;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:250px;
+
+}
+
+.firstPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 65%;
+    background-color: #131313;
+}
+
+.links, .hrefs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialBut {
+    margin: 8px;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    background-color: #333333;
+}
+
+.hrefs a {
+    margin: 8px;
+    font-size: 0.7em;
+    color: #aaa1a1;
+    text-decoration: none;
+}
+
+.secondPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 35%;
+    background-color: black;
+    color: white;
+}
+
+.secondPart h5 {
+    margin: 0;
+    font-weight: normal;
+}
+
+@media (max-width: 1024px) {
+    #item1 h1 {
+       font-size: 35px;
+    }
+
+    #item2 h2, #item3 h2 {
+        font-size: 20px;
+    }
+
+    #item4, #item5, #item7 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(200px, 300px);
+    }
+
+    #item5 div:last-child {
+        display: none;
+    }
+
+    #item6 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(350px, 600px);
+    }
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        display: block;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    nav img {
+        float: left;
+        height: 100%;
+        margin: 0;
+    }
+
+    .hamburger {
+        display: flex;
+        float: right;
+        margin-top: 20px;
+    }
+
+    .featuredGrid {
+        box-sizing: border-box;
+        margin-top: 65px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(150px, 300px);
+        grid-auto-flow: row;
+        row-gap: 5px;
+        column-gap: 5px;
+        width: 100%;
+    }
+
+    #item1, #item2, #item3 {
+        grid-column: 1/ span 1;
+    }
+    
+    #item1 h1 {
+        font-size: 26px;
+     }
+ 
+     #item2 h2, #item3 h2 {
+         font-size: 18px;
+     }
+
+     #item5 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(70px, 220px);
+     }
+ 
+     #item4, #item7 {
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-auto-rows: minmax(70px, 120px);
+     }
+     
+     .news img, .deals img {
+         max-width: 100px;
+         height: auto;
+         float: left;
+         margin: 0;
+     }
+
+     .news h4 {
+         float: right;
+         margin: 0;
+     }
+
+     .deals h4 {
+         margin: 0;
+     }
+
+     .deals p {
+         float: right;
+         margin: 0;
+     }
+ 
+     #item5 div:last-child {
+         display: none;
+     }
+ 
+     #item6 {
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-auto-rows: minmax(350px, 690px);
+     }
+
+     .rounds p {
+         margin: 2px;
+     }
+
+     .rounds p:last-child {
+         margin-top: 10px;
+     }
+
+     .rounds h3 {
+        font-size: 13px;
+    }
+
+    .roundsPanel {
+        font-size: 12px;
+        margin: 0 10px;
+    }
+
+
+     .socialBut {
+         height: 20px;
+         width: 20px;
+         margin: 4px;
+     }
+
+     .hrefs a {
+         margin: 4px;
+         font-size: 0.5em;
+     }
+
+     .secondPart h5 {
+         font-size: 12px;
+         text-align: center;
+     }
+
+}
+
+@media (max-width: 276px) {
+    #item1 h1 {
+        font-size: 15px;
+     }
+ 
+     #item2 h2, #item3 h2 {
+         font-size: 10px;
+     }
+
+     .news, .deals {
+         font-size: 12px;
+     }
+
+     .news img, .deals img {
+         max-width: 50px;
+         height: 100%;
+     }
+
+     #item4, #item7 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(50px, 70px);
+    }
+}
